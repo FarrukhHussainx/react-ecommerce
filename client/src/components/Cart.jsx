@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 
 const Cart = () => {
   const data = [
@@ -24,15 +25,27 @@ const Cart = () => {
     },
   ];
   return (
-    <div className="absolute top-[80px] z-30 right-5 bg-white p-3 ">
+    <div className="absolute top-[80px] z-30 right-5 bg-white p-3 border border-gray-500 rounded-md">
       <h1>Products in you cart</h1>
       {data?.map((item) => (
-        <div key={item.id}>
-          <img className="w-5 h-5" src={item.img} alt="" />
-          <div>
-            <h1>{item.title}</h1>
-            <p>{item.decs.substring(0, 1000)}</p>
+        <div className="mt-2 mb-2" key={item.id}>
+          <div className="flex items-center justify-center gap-5">
+            <img className="w-5 h-5" src={item.img} alt="" />
+            <div>
+              <h1>{item.title}</h1>
+              <p>{item.decs.substring(0, 100)}</p>
+              <div className="text-blue-500">1 X {item.price}</div>
+            </div>
+            <DeleteOutlinedIcon />
           </div>
+          <div className="flex justify-between items-center">
+            <h1>SUBTOTAL</h1>
+            <h1>$123</h1>
+          </div>
+          <button className="mt-2 mb-2 text-white bg-blue-500 p-2">
+            PROCEED TO CHECKOUT
+          </button>
+          <h3 className="text-xs text-red-800">Reset Cart</h3>
         </div>
       ))}
     </div>
