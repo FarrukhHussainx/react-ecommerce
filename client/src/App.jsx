@@ -4,6 +4,9 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Stripe from "./pages/Stripe";
+import Cancel from "./pages/Cancel";
+import Success from "./pages/Success";
 
 const Layout = () => {
   return (
@@ -31,6 +34,18 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <Product />,
+      },
+      {
+        path: "/stripe",
+        element: <Stripe />,
+      },
+      {
+        path: "/success",
+        element: <Success />,
+      },
+      {
+        path: "/cancel",
+        element: <Cancel />,
       },
     ],
   },
