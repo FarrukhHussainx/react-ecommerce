@@ -4,7 +4,7 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Stripe from "./pages/Stripe";
+import Stripex from "./pages/Stripe";
 import Cancel from "./pages/Cancel";
 import Success from "./pages/Success";
 
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/stripe",
-        element: <Stripe />,
+        element: <Stripex />,
       },
       {
         path: "/success",
