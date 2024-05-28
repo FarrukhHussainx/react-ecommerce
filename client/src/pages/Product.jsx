@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const Product = () => {
@@ -8,6 +8,19 @@ const Product = () => {
     "https://images.pexels.com/photos/1068209/pexels-photo-1068209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "https://images.pexels.com/photos/1648535/pexels-photo-1648535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   ];
+
+  useEffect(() => {
+    // Retrieve the item from local storage on component mount
+    const storedItem = localStorage.getItem("cart");
+    if (storedItem) {
+      setSavedItem(storedItem);
+    }
+  }, []);
+
+  const handleSave = () => {
+    // Save the item to local storage
+    localStorage.setItem("cart", { name: "ali" });
+  };
   return (
     <div className="flex">
       <div className="flex w-6/12">
@@ -52,7 +65,7 @@ const Product = () => {
           <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
         </div>
         <div>
-          <button>
+          <button onClick={handleSave}>
             <AddShoppingCartIcon /> ADD TO CART
           </button>
         </div>
