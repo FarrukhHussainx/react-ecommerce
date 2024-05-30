@@ -8,7 +8,7 @@ const Card = ({ item }) => {
         <div className="w-full h-[300px]  overflow-hidden">
           <img
             className="w-full h-full z-10  object-cover shadow-md"
-            src={item.img}
+            src={item.image[0]}
             alt=""
           />
         </div>

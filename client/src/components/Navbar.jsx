@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Cart from "./Cart";
+import userContext from "../context/UserContext";
 
 const Navbar = () => {
+  const context = useContext(userContext);
+  const { user } = context;
   const [open, setOpen] = useState(false);
   return (
     <div className="">
@@ -28,6 +31,18 @@ const Navbar = () => {
           <Link to="products/3" className="hover:text-gray-900 hover:underline">
             Children
           </Link>
+          <div>
+            {user ? (
+              user.username
+            ) : (
+              <Link
+                to="products/3"
+                className="bg-blue-500 text-white p-2 rounded-md"
+              >
+                Login
+              </Link>
+            )}
+          </div>
           <div
             className="flex relative cursor-pointer"
             onClick={() => setOpen(!open)}

@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Stripex from "./pages/Stripe";
 import Cancel from "./pages/Cancel";
 import Success from "./pages/Success";
+import Login from "./pages/Login";
 
 const Layout = () => {
   return (
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         element: <Cancel />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 
