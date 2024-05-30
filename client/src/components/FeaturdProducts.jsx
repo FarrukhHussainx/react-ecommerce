@@ -6,29 +6,6 @@ const FeaturdProducts = (props) => {
   // const context = useContext(userContext);
   // const { data } = context;
   // console.log(data);
-  const [data, setData] = useState();
-  useEffect(() => {
-    // Define the async function inside useEffect
-    const fetchProducts = async () => {
-      try {
-        const url = "http://localhost:5000/api/products";
-        const response = await fetch(url, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const json = await response.json();
-        setData(json);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  console.log(data);
 
   return (
     <div className="m-[100px]">
@@ -44,7 +21,7 @@ const FeaturdProducts = (props) => {
         </p>
       </div>
       <div className="flex gap-8 flex-wrap">
-        {data?.map((item) => (
+        {props.data?.map((item) => (
           <Card item={item} key={item.id} />
         ))}
       </div>
