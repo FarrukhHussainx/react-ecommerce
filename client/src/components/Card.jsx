@@ -15,7 +15,7 @@ const Card = ({ item }) => {
         <div>
           <h1 className="text-lg">{item.title}</h1>
           <div className="flex gap-2">
-            <h1 className="line-through text-gray-400">${item.oldPrice}</h1>
+            <h1 className="line-through text-gray-400">${item.oldprice}</h1>
             <h1>${item.price}</h1>
           </div>
         </div>

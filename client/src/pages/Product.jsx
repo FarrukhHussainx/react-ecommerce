@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const Product = () => {
+  const catId = parseInt(useParams().id);
   const [showImg, setShowImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const img = [

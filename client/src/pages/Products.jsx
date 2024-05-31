@@ -1,11 +1,26 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
+import { useLocation, useParams } from "react-router-dom";
 
 const Products = () => {
+  let { id } = useParams();
+  console.log(id);
   const [price, setPrice] = useState(1000);
   const [sort, setSort] = useState(null);
 
-  const [data, setData] = useState();
+  const [datax, setData] = useState();
+  let data;
+
+  if (id == "women" || id == "men" || id == "children") {
+    data = datax?.filter((user) => user.category == id);
+  } else if (id == "sale") {
+    data = datax?.filter((user) => user.sale);
+  } else if (id == "isnew") {
+    data = datax?.filter((user) => user.isnew);
+  } else {
+    data = datax;
+  }
+
   useEffect(() => {
     // Define the async function inside useEffect
     const fetchProducts = async () => {
@@ -28,14 +43,14 @@ const Products = () => {
   }, []);
 
   return (
-    <div className=" w-full ">
-      <div className=" mr-5">
+    <div className="">
+      <div className=" ">
         <img
-          className=""
-          src="https://images.pexels.com/photos/35537/child-children-girl-happy.jpg"
+          className="h-96 w-full object-cover"
+          src="https://img.freepik.com/free-photo/shocked-frightened-insecure-panicking-woman-blond-hairstyle-silver-dress-touch-head-pop-eyes_1258-229347.jpg?w=1060&t=st=1717131251~exp=1717131851~hmac=be96095713457996afb77a4239836a0aecfe117eb06e9b219a24830f8af39e8e"
           alt=""
         />
-        <div className="flex gap-8 flex-wrap">
+        <div className="flex gap-8 flex-wrap mt-10">
           {data?.map((item) => (
             <Card item={item} key={item.id} />
           ))}
