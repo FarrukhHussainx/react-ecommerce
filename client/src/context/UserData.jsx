@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import UserContext from "./UserContext";
 const UserData = (props) => {
   const [user, setUser] = useState();
+  const [cart, setCart] = useState();
   const userLogin = async (userx) => {
     console.log("from context ", user);
     setUser(userx);

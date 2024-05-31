@@ -1,34 +1,48 @@
 import React, { useEffect, useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useParams } from "react-router-dom";
 
 const Product = () => {
-  const catId = parseInt(useParams().id);
+  //const catId = parseInt(useParams().id);
+  const catId = useParams().id;
   const [showImg, setShowImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const img = [
-    "https://images.pexels.com/photos/1068209/pexels-photo-1068209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "https://images.pexels.com/photos/1648535/pexels-photo-1648535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  ];
+  const [data, setData] = useState();
 
   useEffect(() => {
-    // Retrieve the item from local storage on component mount
-    const storedItem = localStorage.getItem("cart");
-    if (storedItem) {
-      setSavedItem(storedItem);
-    }
-  }, []);
+    // Define the async function inside useEffect
+    const fetchProducts = async () => {
+      console.log(catId, "sjfdkjfdjf");
+      try {
+        const url = `http://localhost:5000/api/products/${catId}`;
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const json = await response.json();
+        setData(json);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchProducts();
+  });
 
   const handleSave = () => {
     // Save the item to local storage
     localStorage.setItem("cart", { name: "ali" });
   };
+  console.log(data);
   return (
     <div className="flex">
       <div className="flex w-6/12">
         <div>
           <img
             className="w-10 h-10"
-            src={img[0]}
+            src={data?.image[0]}
             alt=""
             onClick={() => {
               setShowImg(0);
@@ -36,7 +50,7 @@ const Product = () => {
           />
           <img
             className="w-10 h-10"
-            src={img[1]}
+            src={data?.image[1]}
             alt=""
             onClick={() => {
               setShowImg(1);
@@ -44,7 +58,7 @@ const Product = () => {
           />
         </div>
         <div>
-          <img className="w-20 h-20" src={img[showImg]} alt="" />
+          <img className="w-20 h-20" src={data?.image[showImg]} alt="" />
         </div>
       </div>
       <div className="w-6/12">
