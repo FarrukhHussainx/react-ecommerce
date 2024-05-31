@@ -6,8 +6,8 @@ const Categories = () => {
     <div className=" grid grid-cols-4 gap-2 mr-2 ml-2 ">
       <div className="bg-green-200 h-48 flex justify-center items-center relative overflow-hidden">
         <img
-          className="absolute top-0 object-contain"
-          src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="absolute top-0  h-full w-full"
+          src="https://images.pexels.com/photos/994234/pexels-photo-994234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
         />
         <Link
@@ -19,8 +19,8 @@ const Categories = () => {
       </div>
       <div className="bg-green-200 row-span-2 h-[392px]  flex justify-center items-center relative overflow-hidden">
         <img
-          className="absolute top-0 object-cover"
-          src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="absolute top-0 object-fill h-full w-full"
+          src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
         />
         <Link
@@ -32,8 +32,8 @@ const Categories = () => {
       </div>
       <div className="bg-green-200 h-48 flex justify-center items-center relative overflow-hidden">
         <img
-          className="absolute top-0 "
-          src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="absolute top-0  h-full w-full"
+          src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
         />
         <Link
@@ -45,8 +45,8 @@ const Categories = () => {
       </div>
       <div className="bg-green-200 h-48 flex justify-center items-center relative overflow-hidden">
         <img
-          className="absolute top-0 "
-          src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="absolute top-0  h-full w-full"
+          src="https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
         />
         <Link
@@ -58,8 +58,8 @@ const Categories = () => {
       </div>
       <div className="bg-green-200 h-48 flex justify-center items-center relative overflow-hidden">
         <img
-          className="absolute top-0 "
-          src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="absolute top-0  h-full w-full"
+          src="https://images.pexels.com/photos/1496647/pexels-photo-1496647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
         />
         <Link
@@ -71,8 +71,8 @@ const Categories = () => {
       </div>
       <div className="bg-green-200 col-span-2 h-48 flex justify-center items-center relative overflow-hidden">
         <img
-          className="absolute top-0 object-contain"
-          src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="absolute top-0  h-full w-full"
+          src="https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
         />
         <Link
