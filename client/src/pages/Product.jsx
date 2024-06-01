@@ -38,11 +38,11 @@ const Product = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex m-5 ">
       <div className="flex w-6/12">
-        <div>
+        <div className="w-3/12">
           <img
-            className="w-10 h-10"
+            className="w-32 h-32 object-cover"
             src={data?.image[0]}
             alt=""
             onClick={() => {
@@ -50,7 +50,7 @@ const Product = () => {
             }}
           />
           <img
-            className="w-10 h-10"
+            className="w-32 h-32 object-cover"
             src={data?.image[1]}
             alt=""
             onClick={() => {
@@ -58,8 +58,12 @@ const Product = () => {
             }}
           />
         </div>
-        <div>
-          <img className="w-20 h-20" src={data?.image[showImg]} alt="" />
+        <div className="w-9/12">
+          <img
+            className="w-96 h-96 object-cover"
+            src={data?.image[showImg]}
+            alt=""
+          />
         </div>
       </div>
       <div className="w-6/12">
@@ -71,7 +75,7 @@ const Product = () => {
           dicta tenetur adipisci similique? Fuga voluptatum aperiam dolorum
           eveniet!
         </p>
-        <div className="quantity">
+        <div>
           <button
             onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
           >
@@ -91,13 +95,13 @@ const Product = () => {
             </Link>
           )}
         </div>
-        <div className="info">
+        <div>
           <span>Vendor: Polo</span>
           <span>Product Type: T-Shirt</span>
           <span>Tag: T-Shirt, Women, Top</span>
         </div>
         <hr />
-        <div className="info">
+        <div>
           <span>DESCRIPTION</span>
           <hr />
           <span>ADDITIONAL INFORMATION</span>

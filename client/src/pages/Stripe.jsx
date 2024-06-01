@@ -32,12 +32,10 @@ function Stripex() {
     handelToken(100, token);
   };
   return (
-    <div>
-      <Stripe
-        stripeKey="pk_test_51MTj5ELpSKrpHwNC9BfN99eVtDdfeRLnRns5fjdKv2ceyZ6pZB1hNQPmNANykEfHCBwmn9KOsqAs0iAGJlx2tcLu00PvWP1g8j"
-        token={tokenHandler}
-      />
-    </div>
+    <Stripe
+      stripeKey="pk_test_51MTj5ELpSKrpHwNC9BfN99eVtDdfeRLnRns5fjdKv2ceyZ6pZB1hNQPmNANykEfHCBwmn9KOsqAs0iAGJlx2tcLu00PvWP1g8j"
+      token={tokenHandler}
+    />
   );
 }
 

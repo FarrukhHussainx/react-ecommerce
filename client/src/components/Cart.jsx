@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import userContext from "../context/UserContext";
 import { Link } from "react-router-dom";
+import Stripex from "../pages/Stripe";
 
 const Cart = ({ cart }) => {
   const context = useContext(userContext);
@@ -43,9 +44,7 @@ const Cart = ({ cart }) => {
             <h1>SUBTOTAL</h1>
             <h1>${pr}</h1>
           </div>
-          <button className="mt-2 mb-2 text-white bg-blue-500 p-2">
-            <Link to="stripe">PROCEED TO CHECKOUT</Link>
-          </button>
+          <button>{cart.length == 0 ? <div></div> : <Stripex />}</button>
         </>
       )}
     </div>
