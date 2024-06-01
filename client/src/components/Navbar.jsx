@@ -36,7 +36,7 @@ const Navbar = () => {
               user.username
             ) : (
               <Link
-                to="products/3"
+                to="login"
                 className="bg-blue-500 text-white p-2 rounded-md"
               >
                 Login

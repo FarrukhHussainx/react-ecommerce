@@ -4,8 +4,6 @@ const UserData = (props) => {
   const [user, setUser] = useState();
   const [cart, setCart] = useState();
   const userLogin = async (userx) => {
-    console.log("from context ", user);
-
     const url = `http://localhost:5000/api/cart/${userx._id}`;
     const response = await fetch(url, {
       method: "GET",
@@ -16,15 +14,54 @@ const UserData = (props) => {
     const json = await response.json();
     setUser(userx);
     setCart(json);
-    // fetchAllNote();
-    // //const note={
-    // //   name:"" only for understanding
-    // // }
-    // // setNotes(notes.concat(note));
+  };
+
+  const updateCart = async () => {
+    const url = `http://localhost:5000/api/cart/${user._id}`;
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await response.json();
+    setCart(json);
+  };
+
+  const addToCart = async ({
+    title,
+    isnew,
+    sale,
+    price,
+    oldprice,
+    image,
+    category,
+    quantity,
+  }) => {
+    const url = "http://localhost:5000/api/cart";
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title,
+        isnew,
+        sale,
+        price,
+        oldprice,
+        image,
+        category,
+        quantity,
+        user: user._id,
+      }),
+    });
+    const json = await response.json();
+    updateCart();
   };
 
   return (
-    <UserContext.Provider value={{ cart, userLogin, user }}>
+    <UserContext.Provider value={{ addToCart, cart, userLogin, user }}>
       {props.children}
     </UserContext.Provider>
   );
