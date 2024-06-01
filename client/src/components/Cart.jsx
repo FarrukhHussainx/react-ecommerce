@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 
 const Cart = ({ cart }) => {
   const context = useContext(userContext);
-  const { user } = context;
+  const { user, deleteSingleCart } = context;
   let pr = 0;
+  const handleDelete = (e) => {
+    deleteSingleCart(e);
+  };
   return (
     <div className="absolute top-[80px] z-30 right-5 bg-white p-3 border border-gray-500 rounded-md">
       {!user && (
@@ -30,7 +33,9 @@ const Cart = ({ cart }) => {
                     {item.quantity} X {item.price}
                   </div>
                 </div>
-                <DeleteOutlinedIcon className="text-red-900" />
+                <button onClick={() => handleDelete(item._id)}>
+                  <DeleteOutlinedIcon className="text-red-900" />
+                </button>
               </div>
             </div>
           ))}
@@ -39,7 +44,7 @@ const Cart = ({ cart }) => {
             <h1>${pr}</h1>
           </div>
           <button className="mt-2 mb-2 text-white bg-blue-500 p-2">
-            PROCEED TO CHECKOUT
+            <Link to="stripe">PROCEED TO CHECKOUT</Link>
           </button>
         </>
       )}

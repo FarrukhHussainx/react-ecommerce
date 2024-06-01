@@ -1,13 +1,28 @@
 import axios from "axios";
 import Stripe from "react-stripe-checkout";
+import userContext from "../context/UserContext";
+import { useContext } from "react";
 
 function Stripex() {
-  const handelToken = (totalAmount, token) => {
+  const context = useContext(userContext);
+  const { deleteCart } = context;
+  const handelToken = async (totalAmount, token) => {
     try {
-      axios.post("http://localhost:5000/api/stripe", {
-        token: token.id,
-        amount: totalAmount,
+      const response = await fetch("http://localhost:5000/api/stripe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          token: token.id,
+          amount: totalAmount,
+        }),
       });
+      // axios.post("http://localhost:5000/api/stripe", {
+      //   token: token.id,
+      //   amount: totalAmount,
+      // });
+      deleteCart();
     } catch (error) {
       console.log(error);
     }

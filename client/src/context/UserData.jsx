@@ -3,6 +3,19 @@ import UserContext from "./UserContext";
 const UserData = (props) => {
   const [user, setUser] = useState();
   const [cart, setCart] = useState();
+
+  const deleteCart = async (notex) => {
+    const url = `http://localhost:5000/api/cart`;
+    const response = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await response.json();
+    updateCart();
+  };
+
   const userLogin = async (userx) => {
     const url = `http://localhost:5000/api/cart/${userx._id}`;
     const response = await fetch(url, {
@@ -26,6 +39,18 @@ const UserData = (props) => {
     });
     const json = await response.json();
     setCart(json);
+  };
+
+  const deleteSingleCart = async (id) => {
+    const url = `http://localhost:5000/api/cart/${id}`;
+    const response = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await response.json();
+    updateCart();
   };
 
   const addToCart = async ({
@@ -61,7 +86,9 @@ const UserData = (props) => {
   };
 
   return (
-    <UserContext.Provider value={{ addToCart, cart, userLogin, user }}>
+    <UserContext.Provider
+      value={{ addToCart, cart, userLogin, user, deleteSingleCart, deleteCart }}
+    >
       {props.children}
     </UserContext.Provider>
   );

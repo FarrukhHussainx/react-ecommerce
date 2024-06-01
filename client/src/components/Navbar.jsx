@@ -22,13 +22,22 @@ const Navbar = () => {
           <div className="text-xl font-bold">Smart Shoping</div>
         </Link>
         <div className="flex items-center gap-4">
-          <Link to="products/1" className="hover:text-gray-900 hover:underline">
+          <Link
+            to="products/men"
+            className="hover:text-gray-900 hover:underline"
+          >
             Men
           </Link>
-          <Link to="products/2" className="hover:text-gray-900 hover:underline">
+          <Link
+            to="products/women"
+            className="hover:text-gray-900 hover:underline"
+          >
             Women
           </Link>
-          <Link to="products/3" className="hover:text-gray-900 hover:underline">
+          <Link
+            to="products/children"
+            className="hover:text-gray-900 hover:underline"
+          >
             Children
           </Link>
           <div>
