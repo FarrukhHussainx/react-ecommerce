@@ -6,7 +6,7 @@ import userContext from "../context/UserContext";
 
 const Navbar = () => {
   const context = useContext(userContext);
-  const { user } = context;
+  const { user, cart } = context;
   const [open, setOpen] = useState(false);
   return (
     <div className="">
@@ -49,12 +49,12 @@ const Navbar = () => {
           >
             <ShoppingCartOutlinedIcon className=" w-7 h-7" />
             <span className="absolute flex items-center justify-center text-xs  w-5 h-5 -right-3 -top-3 bg-blue-400 rounded-full">
-              13
+              {cart ? cart.length : 0}
             </span>
           </div>
         </div>
       </div>
-      {open && <Cart />}
+      {open && <Cart cart={cart} />}
     </div>
   );
 };

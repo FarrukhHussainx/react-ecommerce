@@ -47,11 +47,12 @@ exports.postCartItem = async (req, res) => {
 
 exports.getSingleCart = async (req, res) => {
   try {
-    const item = await Cart.findById(req.params.id);
+    const item = await Cart.find({ user: req.params.id });
     if (item == null) {
       return res.status(404).json({ message: "Item not found" });
     }
-    res.json(item);
+    const lg = item.length;
+    res.status(200).json({ length: lg, item });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
