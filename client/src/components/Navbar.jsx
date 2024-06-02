@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import PersonTwoToneIcon from "@mui/icons-material/PersonTwoTone";
 import Cart from "./Cart";
 import userContext from "../context/UserContext";
 
@@ -39,7 +40,10 @@ const Navbar = () => {
           </Link>
           <div>
             {user ? (
-              user.username
+              <div className="mr-2 ml-2 flex gap-1 justify-center items-center">
+                <PersonTwoToneIcon />
+                <h1 className="text-blue-500">{user.username}</h1>
+              </div>
             ) : (
               <Link
                 to="login"

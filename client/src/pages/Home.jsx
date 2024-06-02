@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <>
       {data && (
-        <div>
+        <div className="">
           <Slider />
           <FeaturdProducts type="featured" data={data.slice(0, 4)} />
           <Categories />

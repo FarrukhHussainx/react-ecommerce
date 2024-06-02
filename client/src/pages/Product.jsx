@@ -40,9 +40,9 @@ const Product = () => {
   return (
     <div className="flex m-5 ">
       <div className="flex w-6/12">
-        <div className="w-3/12">
+        <div className="w-3/12 ">
           <img
-            className="w-32 h-32 object-cover"
+            className="w-32 h-32 object-cover mb-5 rounded-md"
             src={data?.image[0]}
             alt=""
             onClick={() => {
@@ -50,7 +50,7 @@ const Product = () => {
             }}
           />
           <img
-            className="w-32 h-32 object-cover"
+            className="w-32 h-32 object-cover rounded-md"
             src={data?.image[1]}
             alt=""
             onClick={() => {
@@ -60,7 +60,7 @@ const Product = () => {
         </div>
         <div className="w-9/12">
           <img
-            className="w-96 h-96 object-cover"
+            className="w-[400px] h-[450px] object-cover rounded-md"
             src={data?.image[showImg]}
             alt=""
           />
@@ -68,7 +68,7 @@ const Product = () => {
       </div>
       <div className="w-6/12">
         <h1 className="text-xl">{data?.title}</h1>
-        <h2 className="text-lg">
+        <h2 className="text-md text-blue-500">
           $<span className="text-blue-500">{data?.price}</span>
         </h2>
         <p className="text-sm text-gray-500">
@@ -76,7 +76,7 @@ const Product = () => {
           of timeless style and comfort. Crafted from 100% premium cotton, this
           shirt offers a soft, breathable feel that ensures all-day comfort.
         </p>
-        <div className="flex mt-5 mb-5">
+        <div className="flex mt-3 mb-3">
           <button
             className="mr-2 text-xl"
             onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
@@ -94,7 +94,7 @@ const Product = () => {
             +
           </button>
         </div>
-        <div className="bg-blue-500 p-2  rounded-md text-white">
+        <div className="bg-blue-500 p-2 pr-5 pl-5 mb-10  rounded-md text-white w-fit">
           {user ? (
             <button onClick={handleSave}>
               <AddShoppingCartIcon /> ADD TO CART
@@ -105,17 +105,17 @@ const Product = () => {
             </Link>
           )}
         </div>
-        <div>
-          <span>Vendor: Polo</span>
-          <span>Product Type: T-Shirt</span>
-          <span>Tag: T-Shirt, Women, Top</span>
+        <div className="mt-3  text-gray-400 text-xs">
+          <h2>Vendor: Polo</h2>
+          <h2>Product Type: T-Shirt</h2>
+          <h2>Tag: T-Shirt, Women, Top</h2>
         </div>
-        <hr />
-        <div>
+        <hr className=" mb-3 mt-3 " />
+        <div className="text-gray-400 text-xs">
           <span>DESCRIPTION</span>
-          <hr />
+          <hr className="mt-1 mb-1" />
           <span>ADDITIONAL INFORMATION</span>
-          <hr />
+          <hr className="mt-1 mb-1" />
           <span>FAQ</span>
         </div>
       </div>

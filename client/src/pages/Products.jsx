@@ -50,7 +50,7 @@ const Products = () => {
           src="https://img.freepik.com/free-photo/shocked-frightened-insecure-panicking-woman-blond-hairstyle-silver-dress-touch-head-pop-eyes_1258-229347.jpg?w=1060&t=st=1717131251~exp=1717131851~hmac=be96095713457996afb77a4239836a0aecfe117eb06e9b219a24830f8af39e8e"
           alt=""
         />
-        <div className="flex gap-8 flex-wrap mt-10">
+        <div className="flex gap-8 flex-wrap mt-10 m-[100px]">
           {data?.map((item) => (
             <Card item={item} key={item._id} />
           ))}

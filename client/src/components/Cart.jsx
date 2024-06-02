@@ -26,7 +26,7 @@ const Cart = ({ cart }) => {
               <div className="hidden">{(pr += item.price)}</div>
 
               <div className="flex items-center justify-center gap-5">
-                <img className="w-5 h-5" src={item.image[0]} alt="" />
+                <img className="w-5 h-5 " src={item.image[0]} alt="" />
                 <div>
                   <h1>{item.title}</h1>
                   <p>Lorem ipsum dolor sit amet...</p>
