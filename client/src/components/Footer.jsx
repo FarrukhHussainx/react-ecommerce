@@ -38,12 +38,13 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="mt-16">
-        <div className="text-gray-500 flex gap-3 items-center">
+      <div className="mt-16 ">
+        <div className="text-gray-500 flex gap-3 items-center pb-5">
           <h2 className="text-xl font-bold text-blue-500">Smart Shoping</h2>
-          <h3 className="text-sm">@Copyright 2024, All Rights Reserved</h3>
+          <h3 className="text-sm ">@Copyright 2024, All Rights Reserved</h3>
         </div>
       </div>
+      <div className="mt-5"></div>
     </div>
   );
 };

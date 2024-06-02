@@ -4,6 +4,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonTwoToneIcon from "@mui/icons-material/PersonTwoTone";
 import Cart from "./Cart";
 import userContext from "../context/UserContext";
+import ShoppingBagTwoToneIcon from "@mui/icons-material/ShoppingBagTwoTone";
 
 const Navbar = () => {
   const context = useContext(userContext);
@@ -12,12 +13,9 @@ const Navbar = () => {
   return (
     <div className="">
       <div className="h-20 mr-7 ml-7 flex justify-between  items-center text-gray-700">
-        <Link to="/" className="flex items-center ">
-          <img
-            className="w-16 h-16"
-            src="https://img.freepik.com/free-vector/ecommerce-campaign-concept-illustration_114360-8432.jpg?t=st=1716012918~exp=1716016518~hmac=d43a7cc611161eb320a572b5a818d9eafce4e554bcdb3363570c04a2513ff898&w=740"
-          />
-          <div className="text-xl font-bold">Smart Shoping</div>
+        <Link to="/" className="flex justify-center items-center ">
+          <ShoppingBagTwoToneIcon className="text-blue-500 " />
+          <div className="text-lg font-bold">Smart Shoping</div>
         </Link>
         <div className="flex items-center gap-4">
           <Link

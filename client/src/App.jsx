@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Stripex from "./pages/Stripe";
 
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const Layout = () => {
   return (
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
 
