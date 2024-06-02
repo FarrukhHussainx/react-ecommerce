@@ -39,10 +39,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-16">
-        <h1 className="text-gray-500 flex gap-3 items-center">
+        <div className="text-gray-500 flex gap-3 items-center">
           <h2 className="text-xl font-bold text-blue-500">Smart Shoping</h2>
           <h3 className="text-sm">@Copyright 2024, All Rights Reserved</h3>
-        </h1>
+        </div>
       </div>
     </div>
   );

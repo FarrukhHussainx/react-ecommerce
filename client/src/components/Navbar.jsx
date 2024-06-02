@@ -10,10 +10,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="">
-      <div
-        div
-        className="h-20 mr-7 ml-7 flex justify-between  items-center text-gray-700"
-      >
+      <div className="h-20 mr-7 ml-7 flex justify-between  items-center text-gray-700">
         <Link to="/" className="flex items-center ">
           <img
             className="w-16 h-16"

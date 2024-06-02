@@ -44,7 +44,7 @@ const Cart = ({ cart }) => {
             <h1>SUBTOTAL</h1>
             <h1>${pr}</h1>
           </div>
-          <button>{cart.length == 0 ? <div></div> : <Stripex />}</button>
+          <div>{cart.length == 0 ? <div></div> : <Stripex />}</div>
         </>
       )}
     </div>

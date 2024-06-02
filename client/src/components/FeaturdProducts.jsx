@@ -8,7 +8,7 @@ const FeaturdProducts = (props) => {
   // console.log(data);
 
   return (
-    <div className="m-[100px]">
+    <div className="m-[100px] mt-10">
       <div className="flex items-center mb-12">
         <div className="flex-[2_2_0%] text-xl font-bold capitalize">
           {props.type} Products

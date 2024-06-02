@@ -5,8 +5,7 @@ import Product from "./pages/Product";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Stripex from "./pages/Stripe";
-import Cancel from "./pages/Cancel";
-import Success from "./pages/Success";
+
 import Login from "./pages/Login";
 
 const Layout = () => {
@@ -39,14 +38,6 @@ const router = createBrowserRouter([
       {
         path: "/stripe",
         element: <Stripex />,
-      },
-      {
-        path: "/success",
-        element: <Success />,
-      },
-      {
-        path: "/cancel",
-        element: <Cancel />,
       },
     ],
   },

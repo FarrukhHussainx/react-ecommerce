@@ -52,7 +52,7 @@ const Products = () => {
         />
         <div className="flex gap-8 flex-wrap mt-10">
           {data?.map((item) => (
-            <Card item={item} key={item.id} />
+            <Card item={item} key={item._id} />
           ))}
         </div>
       </div>
