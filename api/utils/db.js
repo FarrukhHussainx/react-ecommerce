@@ -8,8 +8,7 @@ const connectDB = async () => {
     return;
   }
   try {
-    const DB =
-      "mongodb+srv://farrukhx:farrukh123@cluster0.zotdnvr.mongodb.net/smartshoping?retryWrites=true&w=majority";
+    const DB = process.env.BASEURLDB;
     //const DB = "mongodb://0.0.0.0:27017";
     mongoose.set("strictQuery", true);
     await mongoose.connect(DB);
