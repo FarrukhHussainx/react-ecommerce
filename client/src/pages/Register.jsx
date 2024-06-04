@@ -12,7 +12,7 @@ const Register = () => {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/api/signup";
+    const url = "https://react-ecommerce-five-puce.vercel.app/api/signup";
     const response = await fetch(url, {
       method: "POST",
       headers: {

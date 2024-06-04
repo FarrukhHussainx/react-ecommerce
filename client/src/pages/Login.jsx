@@ -8,7 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/api/login";
+    const url = "https://react-ecommerce-five-puce.vercel.app/api/login";
     const response = await fetch(url, {
       method: "POST",
       headers: {

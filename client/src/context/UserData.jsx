@@ -5,7 +5,7 @@ const UserData = (props) => {
   const [cart, setCart] = useState();
 
   const deleteCart = async (notex) => {
-    const url = `http://localhost:5000/api/cart`;
+    const url = `https://react-ecommerce-five-puce.vercel.app/api/cart`;
     const response = await fetch(url, {
       method: "DELETE",
       headers: {
@@ -17,7 +17,7 @@ const UserData = (props) => {
   };
 
   const userLogin = async (userx) => {
-    const url = `http://localhost:5000/api/cart/${userx._id}`;
+    const url = `https://react-ecommerce-five-puce.vercel.app/api/cart/${userx._id}`;
     const response = await fetch(url, {
       method: "GET",
       headers: {
@@ -30,7 +30,7 @@ const UserData = (props) => {
   };
 
   const updateCart = async () => {
-    const url = `http://localhost:5000/api/cart/${user._id}`;
+    const url = `https://react-ecommerce-five-puce.vercel.app/api/cart/${user._id}`;
     const response = await fetch(url, {
       method: "GET",
       headers: {
@@ -42,7 +42,7 @@ const UserData = (props) => {
   };
 
   const deleteSingleCart = async (id) => {
-    const url = `http://localhost:5000/api/cart/${id}`;
+    const url = `https://react-ecommerce-five-puce.vercel.app/api/cart/${id}`;
     const response = await fetch(url, {
       method: "DELETE",
       headers: {
@@ -63,7 +63,7 @@ const UserData = (props) => {
     category,
     quantity,
   }) => {
-    const url = "http://localhost:5000/api/cart";
+    const url = "https://react-ecommerce-five-puce.vercel.app/api/cart";
     const response = await fetch(url, {
       method: "POST",
       headers: {
