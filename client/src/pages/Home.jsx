@@ -10,7 +10,7 @@ const Home = () => {
     // Define the async function inside useEffect
     const fetchProducts = async () => {
       try {
-        const url = "http://localhost:5000/api/products";
+        const url = "https://react-ecommerce-five-puce.vercel.app/api/products";
         const response = await fetch(url, {
           method: "GET",
           headers: {

@@ -16,7 +16,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const url = `http://localhost:5000/api/products/${catId}`;
+        const url = `https://react-ecommerce-five-puce.vercel.app/api/products/${catId}`;
         const response = await fetch(url, {
           method: "GET",
           headers: {
