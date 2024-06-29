@@ -8,16 +8,19 @@ function Stripex() {
   const { deleteCart } = context;
   const handelToken = async (totalAmount, token) => {
     try {
-      const response = await fetch("http://localhost:5000/api/stripe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          token: token.id,
-          amount: totalAmount,
-        }),
-      });
+      const response = await fetch(
+        "https://react-ecommerce-five-puce.vercel.app/api/stripe",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            token: token.id,
+            amount: totalAmount,
+          }),
+        }
+      );
       // axios.post("http://localhost:5000/api/stripe", {
       //   token: token.id,
       //   amount: totalAmount,
