@@ -28,6 +28,7 @@ const Products = () => {
         const url = "https://react-ecommerce-five-puce.vercel.app/api/products";
         const response = await fetch(url, {
           method: "GET",
+
           headers: {
             "Content-Type": "application/json",
           },
